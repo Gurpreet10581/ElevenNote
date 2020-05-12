@@ -63,6 +63,10 @@
     <Compile Include="Migrations\202005121916564_Initial.Designer.cs">
       <DependentUpon>202005121916564_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005122055518_addingContenProperty.cs" />
+    <Compile Include="Migrations\202005122055518_addingContenProperty.Designer.cs">
+      <DependentUpon>202005122055518_addingContenProperty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Note.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,6 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005121916564_Initial.resx">
       <DependentUpon>202005121916564_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005122055518_addingContenProperty.resx">
+      <DependentUpon>202005122055518_addingContenProperty.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
