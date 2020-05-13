@@ -12,7 +12,7 @@ namespace ElevenNote.Services
     public class NoteService
     {
         private readonly Guid _userId;
-        
+
         public NoteService(Guid userId)
         {
             _userId = userId;
@@ -28,9 +28,10 @@ namespace ElevenNote.Services
                     //all the properties below are from NoteCreate model
                     Title = model.Title,
                     Content = model.Content,
+                    CategoryId = model.CategoryId,
                     CreatedUtc = DateTimeOffset.Now//have to set it as Datetimeoffset.now so it records the date and time of note created.
                 };
-            using (var ctx = new ApplicationDbContext()) 
+            using (var ctx = new ApplicationDbContext())
             {
                 ctx.Notes.Add(entity);
                 return ctx.SaveChanges() == 1;
@@ -61,7 +62,7 @@ namespace ElevenNote.Services
         }
         public NoteDetail GetNoteById(int id)
         {
-           using(var ctx = new ApplicationDbContext())
+            using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
@@ -81,7 +82,7 @@ namespace ElevenNote.Services
         }
         public bool UpdateNote(NoteEdit model)
         {
-            using (var ctx= new ApplicationDbContext())
+            using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
