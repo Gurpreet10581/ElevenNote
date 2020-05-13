@@ -3,16 +3,16 @@ namespace ElevenNote.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class addingContenProperty : DbMigration
+    public partial class AddingNoteStar : DbMigration
     {
         public override void Up()
         {
-            AddColumn("dbo.Note", "Content", c => c.String(nullable: false));
+            AddColumn("dbo.Note", "IsStarred", c => c.Boolean(nullable: false));
         }
         
         public override void Down()
         {
-            DropColumn("dbo.Note", "Content");
+            DropColumn("dbo.Note", "IsStarred");
         }
     }
 }

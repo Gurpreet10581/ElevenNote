@@ -7,13 +7,13 @@ namespace ElevenNote.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class addingContenProperty : IMigrationMetadata
+    public sealed partial class AddingIsStarred : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addingContenProperty));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddingIsStarred));
         
         string IMigrationMetadata.Id
         {
-            get { return "202005122055518_addingContenProperty"; }
+            get { return "202005131911406_AddingIsStarred"; }
         }
         
         string IMigrationMetadata.Source
