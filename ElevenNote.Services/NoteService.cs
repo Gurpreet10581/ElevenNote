@@ -28,8 +28,9 @@ namespace ElevenNote.Services
                     //all the properties below are from NoteCreate model
                     Title = model.Title,
                     Content = model.Content,
+                    CreatedUtc = DateTimeOffset.Now,//have to set it as Datetimeoffset.now so it records the date and time of note created.
                     CategoryId = model.CategoryId,
-                    CreatedUtc = DateTimeOffset.Now//have to set it as Datetimeoffset.now so it records the date and time of note created.
+
                 };
             using (var ctx = new ApplicationDbContext())
             {
@@ -54,7 +55,8 @@ namespace ElevenNote.Services
                             {
                                 NoteId = e.NoteId,
                                 Title = e.Title,
-                                CreatedUtc = e.CreatedUtc
+                                CreatedUtc = e.CreatedUtc,
+                                CategoryId= e.CategoryId
                             }
                         );
                 return query.ToArray();
@@ -76,6 +78,7 @@ namespace ElevenNote.Services
                         Title = entity.Title,
                         Content = entity.Content,
                         CreatedUtc = entity.CreatedUtc,
+                        CategoryId=entity.CategoryId,
                         ModifiedUtc = entity.ModifiedUtc
                     };
             }

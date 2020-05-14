@@ -10,11 +10,18 @@ namespace ElevenNote.Services
 {
     public class CategoryService
     {
+        private readonly Guid _userId;
+
+        public CategoryService(Guid userId)
+        {
+            _userId = userId;
+        }
         public bool CreateCategory(CategoryCreate model)
         {
             var entity =
                 new Category()// creating instance of category
                 {
+                    
                     CategoryName = model.CategoryName
                 };
             using(var ctx =new ApplicationDbContext())

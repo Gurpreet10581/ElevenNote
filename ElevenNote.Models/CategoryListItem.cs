@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ElevenNote.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,5 +12,6 @@ namespace ElevenNote.Models
 
         public int CategoryId { get; set; }
         public string CategoryName { get; set; }
+        public Category Category { get; set; }
     }
 }

@@ -105,8 +105,8 @@ namespace ElevenNote.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeletePost(int id)
         {
-            var serice = CreateNoteService();
-            serice.DeleteNote(id);
+            var service = CreateNoteService();
+            service.DeleteNote(id);
             TempData["SaveResult"] = "Your note was deleted";
 
             return RedirectToAction("Index");

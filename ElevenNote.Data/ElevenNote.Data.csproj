@@ -68,43 +68,12 @@
   <ItemGroup>
     <Compile Include="Category.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202005131345455_InitialCreate.cs" />
-    <Compile Include="Migrations\202005131345455_InitialCreate.Designer.cs">
-      <DependentUpon>202005131345455_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202005131850179_AddingNoteStar.cs" />
-    <Compile Include="Migrations\202005131850179_AddingNoteStar.Designer.cs">
-      <DependentUpon>202005131850179_AddingNoteStar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202005131911406_AddingIsStarred.cs" />
-    <Compile Include="Migrations\202005131911406_AddingIsStarred.Designer.cs">
-      <DependentUpon>202005131911406_AddingIsStarred.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202005132036421_addingCategoryClassModelanService.cs" />
-    <Compile Include="Migrations\202005132036421_addingCategoryClassModelanService.Designer.cs">
-      <DependentUpon>202005132036421_addingCategoryClassModelanService.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Note.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202005131345455_InitialCreate.resx">
-      <DependentUpon>202005131345455_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202005131850179_AddingNoteStar.resx">
-      <DependentUpon>202005131850179_AddingNoteStar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202005131911406_AddingIsStarred.resx">
-      <DependentUpon>202005131911406_AddingIsStarred.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202005132036421_addingCategoryClassModelanService.resx">
-      <DependentUpon>202005132036421_addingCategoryClassModelanService.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
